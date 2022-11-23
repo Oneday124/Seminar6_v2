@@ -9,7 +9,7 @@ void CheckTheTriangle (int a, int b, int c)
     else System.Console.WriteLine("Такой треугольник не может существовать");
 }
 
-bool IsTriangle(int[] array)
+bool IsTriangle(int[] array) // Решение группы
 {
     bool flag = true;
     for(int i = 0; flag && i < array.Length; i++)
@@ -28,5 +28,5 @@ int c = int.Parse(Console.ReadLine() !);
 
 CheckTheTriangle(a,b,c);
 
-int[] arrayTriangle = new int[]{a, b, c};
-System.Console.WriteLine(IsTriangle(arrayTriangle));
+int[] arrayTriangle = new int[]{a, b, c}; // решение группы
+System.Console.WriteLine(IsTriangle(arrayTriangle)); // решение группы

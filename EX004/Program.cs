@@ -1,6 +1,6 @@
 ﻿// Напишите программу, которая будет преобразовывать десятичное число в двоичное. Через строку
 
-string Transletion (int num)
+string Translation (int num)
 {
     string result = "";
     while (num > 0)
@@ -15,4 +15,4 @@ string Transletion (int num)
 Console.WriteLine("Введите число: ");
 int num = int.Parse(Console.ReadLine() !);
 
-System.Console.WriteLine(Transletion(num));
+System.Console.WriteLine(Translation(num));

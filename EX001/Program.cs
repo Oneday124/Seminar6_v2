@@ -11,6 +11,16 @@ void RevertArray(int[] array)
     }
 }
 
+int[] CopyRevertArray(int[] array)
+{
+    int[] copy = new int[array.Length];
+    for(int i = 0; i < array.Length; i++)
+    {
+        copy[i] =  array[^(i+1)]; //array[array.Length - 1 - i]; ^ означает, что элемент берется с конца
+    }
+    return copy;
+}
+
  void PrintArray(int[] array)
  {
     System.Console.WriteLine(string.Join(", ",array));
@@ -19,4 +29,9 @@ void RevertArray(int[] array)
 int[] array = new int[]{ 1, 2, 3, 4, 5 };
 
 RevertArray(array);
+PrintArray(array);
+System.Console.WriteLine();
+
+int[] copyOfArray = CopyRevertArray(array);
+PrintArray(copyOfArray);
 PrintArray(array);

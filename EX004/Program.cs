@@ -6,7 +6,7 @@ string Translation (int num)
     while (num > 0)
     {
         int ost = num % 2;
-        num = num / 2;
+        num /= 2; // num / 2;
         result = ost + result; 
     }
     return result;

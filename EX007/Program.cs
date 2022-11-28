@@ -19,8 +19,8 @@ int Max (int[] array)
 
 int MinExcluded (int[] array, int mex, int max)
 {
-    int temp = 1;
-    while(temp < max)
+    int temp = 0;
+    while(temp <= max)
     {
         for(int i = 0; i < array.Length; i++)
         {
@@ -31,6 +31,7 @@ int MinExcluded (int[] array, int mex, int max)
         }
         temp++;
     }
+    if(mex == max) mex = max+1;
     return mex;
 }
 
@@ -42,4 +43,4 @@ for(int i = 0; i < strings.Length; i++)
     array[i] = int.Parse(strings[i]);
 }
 PrintArray(array);
-System.Console.WriteLine($"MEX = {MinExcluded (array, 1, Max(array))}");
+System.Console.WriteLine($"MEX = {MinExcluded (array, 0, Max(array))}");
